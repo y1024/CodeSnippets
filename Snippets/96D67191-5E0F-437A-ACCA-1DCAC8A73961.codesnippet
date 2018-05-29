@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>line</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIView *lineView = ({
+    UIView *l = [UIView new];
+    l.backgroundColor = [UIColor mr_hexString:@"D8D8D8"];
+    l;
+});
+[&lt;#UIView#&gt; addSubview:lineView];
+lineView.translatesAutoresizingMaskIntoConstraints = NO;
+NSArray *lineViewH = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[lineView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(lineView)];
+NSArray *lineViewV = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[lineView(==0.5)]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(lineView)];
+[&lt;#UIView#&gt; addConstraints:lineViewH];
+[&lt;#UIView#&gt; addConstraints:lineViewV];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>96D67191-5E0F-437A-ACCA-1DCAC8A73961</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>line</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>线</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

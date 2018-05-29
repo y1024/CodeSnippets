@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Singleton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static &lt;#(id)#&gt; *_singletonObject = nil ;
+
+- (void)dealloc
+{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (instancetype)init
+{
+    if (_singletonObject) {
+        
+        return _singletonObject;
+    }
+    else
+    {
+        static dispatch_once_t onceToken;
+        dispatch_once(&amp;onceToken, ^{
+            
+            _singletonObject = [super init];
+            
+        });
+    }
+    return _singletonObject ;
+}
+
++ (instancetype)shareSingleton
+{
+    if (_singletonObject) {
+        
+        return _singletonObject;
+        
+    }
+    _singletonObject = [[super allocWithZone:nil]init];
+    
+    return _singletonObject ;
+}
+
+#pragma mark + allocWithZone
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    return [self shareSingleton];
+}
+#pragma mark - copyWithZone
+- (instancetype)copyWithZone:(NSZone*)zone
+{
+    return self ;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>24D88B1A-797B-40B3-BB43-9FAAEAFAE508</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Singleton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
