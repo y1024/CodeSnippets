@@ -3,24 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>rac_w</string>
+	<string>rac_nc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@weakify(self);</string>
+	<string>[[[[NSNotificationCenter defaultCenter] rac_addObserverForName:&lt;#notification#&gt;
+ object:nil]
+ takeUntil:[self rac_willDeallocSignal]]subscribeNext:^(NSNotification *x) {
+     
+     }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8D850D3A-5FCC-4577-9561-6852B4FBAE80</string>
+	<string>7DFCE7B5-C6B8-4731-B681-B87098CB7127</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@weakify</string>
+	<string>NotificationCenter</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>ReactiveCocoa</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
