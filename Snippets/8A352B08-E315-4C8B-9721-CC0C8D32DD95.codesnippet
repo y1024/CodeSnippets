@@ -3,26 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>rac_button</string>
+	<string>rac_alert</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    [[&lt;#UIButton#&gt; rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+	<string>UIAlertView *alert = [[UIAlertView alloc]initWithTitle:&lt;#(nullable NSString *)#&gt; message:&lt;#(nullable NSString *)#&gt; delegate:nil cancelButtonTitle:&lt;#(nullable NSString *)#&gt; otherButtonTitles:&lt;#(nullable NSString *), ...#&gt;, nil];
+[alert show];
+@weakify(self);
+[[alert rac_buttonClickedSignal]subscribeNext:^(NSNumber *x) {
+    @strongify(self);
+    NSInteger idx = x.integerValue;
+    if (idx == 1) {
         
+    }
+    else {};
     }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>55BED87D-F784-48E5-AF3E-2DF879B9FAD1</string>
+	<string>8A352B08-E315-4C8B-9721-CC0C8D32DD95</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>button</string>
+	<string>rac</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ReactiveCocoa</string>
+	<string>UIAlertView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
